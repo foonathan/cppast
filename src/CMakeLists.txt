@@ -109,6 +109,13 @@ target_compile_definitions(cppast PUBLIC
                                 CPPAST_VERSION_MINOR="${cppast_VERSION_MINOR}"
                                 CPPAST_VERSION_MAJOR="${cppast_VERSION_MAJOR}"
                                 CPPAST_VERSION_STRING="${cppast_VERSION}")
+
+if(CPPAST_USE_OLD_LIBSTDCPP_ABI)
+    target_compile_definitions(cppast PUBLIC _GLIBCXX_USE_CXX11_ABI=0)
+else()
+    target_compile_definitions(cppast PUBLIC _GLIBCXX_USE_CXX11_ABI=1)
+endif()
+
 target_compile_options(cppast PRIVATE
                            # clang/GCC warnings
                            $<$<OR:$<CXX_COMPILER_ID:Clang>,$<CXX_COMPILER_ID:GNU>>:
