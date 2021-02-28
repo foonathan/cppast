@@ -11,10 +11,10 @@
 #include <type_safe/optional_ref.hpp>
 
 #include <cppast/detail/assert.hpp>
+#include <cppast/forward.hpp>
 
 namespace cppast
 {
-class cpp_file;
 
 namespace detail
 {

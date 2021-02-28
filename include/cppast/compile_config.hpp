@@ -12,6 +12,7 @@
 #include <type_safe/reference.hpp>
 
 #include <cppast/detail/assert.hpp>
+#include <cppast/forward.hpp>
 
 namespace cppast
 {

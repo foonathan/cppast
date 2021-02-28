@@ -15,12 +15,10 @@
 #include <type_safe/reference.hpp>
 #include <type_safe/strong_typedef.hpp>
 
+#include <cppast/forward.hpp>
+
 namespace cppast
 {
-class cpp_entity;
-class cpp_file;
-class cpp_namespace;
-
 /// \exclude
 namespace detail
 {
